@@ -1,7 +1,7 @@
 import React from 'react';
 
 function CreateContainer() {
-  return <div></div>;
+  return <div>Create item</div>;
 }
 
 export default CreateContainer;
