@@ -1,6 +1,7 @@
 import React from "react";
 import Delivery from "../../img/delivery.png";
 import HeroBg from "../../img/heroBg.png";
+import { heroData } from "../../utils/data";
 
 function HomeContainer() {
   return (
@@ -43,9 +44,25 @@ function HomeContainer() {
             className="ml-auto h-420 w-full lg:w-auto lg:h-650"
             alt="hero-background-img"
           />
-          <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center px-32 py-4">
+          <div className="w-full h-full absolute top-0 left-0 flex items-center justify-center py-4 gap-4 flex-wrap lg:px-32">
+            {heroData &&
+              heroData.map(({name, desc, img, price},i) => {
+                return (
+                  <div className=" lg:w-190 bg-cardOverlay backdrop-blur-md rounded-3xl p-2 lg:p-4 flex items-center justify-center flex-col drop-shadow-lg " key={i}>
+                    <img src={img} alt="ice-cream" className="w-20 lg:w-40 -mt-10 lg:-mt-20" />
+                    <p className="text-base lg:text-xl font-semibold text-textColor mt-2 lg:mt-4">
+                      {name}
+                    </p>
 
-          <div className="w-190 p-2 bg-cardOverlay backdrop-blur-md"></div>
+                    <p className="text-sm text-lighttextGray font-semibold my-1 lg:my-4">
+                      {desc}
+                    </p>
+                    <p className="text=[12px] lg:text-sm font-semibold text-headingColor">
+                      <span className="text-xs text-red-600">$</span> {price}
+                    </p>
+                  </div>
+                );
+              })}
           </div>
         </div>
       </div>

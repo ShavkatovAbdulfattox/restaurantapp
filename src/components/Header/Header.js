@@ -43,7 +43,7 @@ function Header() {
   };
 
   return (
-    <header className="fixed z-50 w-screen  p-3 px-4 md:p-6 md:px-16">
+    <header className="fixed z-50 w-screen  p-3 px-4 md:p-6 md:px-16 bg-primary">
       {/* {dekstop & tablet} */}
       <div className="hidden md:flex w-full h-full">
         <Link to={"/"} className="flex items-center gap-2 mr-auto">
@@ -95,7 +95,10 @@ function Header() {
             >
               {user && user.email === "vwhoami@yahoo.com" && (
                 <Link to={"/createItem"}>
-                  <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-out text-textColor text-base">
+                  <p
+                    className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-out text-textColor text-base"
+                    onClick={() => setIsMenu(false)}
+                  >
                     New Item <MdAdd />
                   </p>
                 </Link>
@@ -141,7 +144,10 @@ function Header() {
             >
               {user && user.email === "vwhoami@yahoo.com" && (
                 <Link to={"/createItem"}>
-                  <p className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-out text-textColor text-base">
+                  <p
+                    className="px-4 py-2 flex items-center gap-3 cursor-pointer hover:bg-slate-100 transition-all duration-100 ease-out text-textColor text-base"
+                    onClick={() => setIsMenu(false)}
+                  >
                     New Item <MdAdd />
                   </p>
                 </Link>
