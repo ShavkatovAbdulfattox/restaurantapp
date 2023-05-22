@@ -22,7 +22,7 @@ function RowContainer({ flag, data, scrollValue }) {
           : "overflow-x-hidden flex-wrap justify-center"
       }`}
     >
-      {data.length > 0 ? (
+      {data?.length > 0 ? (
         data.map((item) => {
           return (
             <div

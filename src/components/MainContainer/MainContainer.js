@@ -5,6 +5,7 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import RowContainer from "../RowContainer/RowContainer";
 import { useStateValue } from "../../context/stateProvider";
 import MenuContainer from "../MenuContainer/MenuContainer";
+import CartContainer from "../CartContainer/CartContainer";
 
 function MainContainer() {
   const [{ foodItems }, dispatch] = useStateValue();
@@ -45,6 +46,7 @@ function MainContainer() {
       </section>
 
       <MenuContainer />
+      <CartContainer/>
     </div>
   );
 }
