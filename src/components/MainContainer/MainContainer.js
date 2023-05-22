@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import RowContainer from "../RowContainer/RowContainer";
 import { useStateValue } from "../../context/stateProvider";
+import MenuContainer from "../MenuContainer/MenuContainer";
 
 function MainContainer() {
   const [{ foodItems }, dispatch] = useStateValue();
@@ -29,7 +30,7 @@ function MainContainer() {
             </motion.div>
             <motion.div
               whileTap={{ scale: 0.75 }}
-              className="w-8 h-8 rounded-lg bg-orange-300 hover:bg-orange-500 cursor-pointer transition-all duration-100 ease-in-out hover:shadow-lg flex items-center justify-center"
+              className="w-8 h-8 rounded-lg bg-orange-300 hover:bg-orange-500 cursor-pointer  hover:shadow-lg flex items-center justify-center"
               onClick={() => setScrollValue(200)}
             >
               <MdChevronRight className="text-lg text-white" />
@@ -43,9 +44,7 @@ function MainContainer() {
         />
       </section>
 
-      <section className="w-full my-6">
-        
-      </section>
+      <MenuContainer />
     </div>
   );
 }
